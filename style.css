@@ -287,22 +287,37 @@ main {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 2rem;
+    gap: 4rem; /* Increased gap */
+    padding: 0 5%;
 }
 
 .hero-content {
-    flex: 1;
+    flex: 1.2; /* Give content more weight */
     min-width: 0;
+    z-index: 2; /* Keep text above everything */
 }
 
 .hero-content h1 {
     font-size: 5rem;
     margin-bottom: 2rem;
     line-height: 1.1;
+    white-space: nowrap; /* Prevent name wrapping to keep layout stable */
 }
 
 .hero-visual {
-    flex-shrink: 0;
+    flex: 0.8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.cube-container {
+    width: 280px;
+    height: 280px;
+    perspective: 1000px;
+    margin-left: auto; /* Push to the right */
 }
 
 /* Skills Tags */

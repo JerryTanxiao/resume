@@ -21,7 +21,6 @@
                 <li><a href="#skills">能力</a></li>
                 <li><a href="#experience">经验</a></li>
                 <li><a href="#projects">项目</a></li>
-                <li><a href="https://gitee.com/vanseny/easy-utils" target="_blank" class="nav-highlight">开源作品</a></li>
                 <li><a href="#contact">联系</a></li>
             </ul>
         </div>
@@ -33,8 +32,15 @@
                 <h2 class="badge">资深 Java 架构师 & AI 专家</h2>
                 <h1 class="reveal-text">谭杰 <span>TAN JIE</span></h1>
                 <p class="subtitle">8年+ 深耕高级 Java 开发、SaaS 风控架构与 AI 工程化应用</p>
+                
+                <!-- Moved Project Links Here -->
+                <div class="hero-social-links" style="margin-bottom: 3rem; display: flex; gap: 1.5rem;">
+                    <a href="https://gitee.com/vanseny/easy-utils" target="_blank" class="nav-highlight">Gitee 开源作品</a>
+                    <a href="https://blog.csdn.net/qq_20282955" target="_blank" class="btn secondary btn-sm" style="border: 1px solid var(--primary-color);">CSDN 技术博客</a>
+                </div>
+
                 <div class="hero-cta">
-                    <a href="#projects" class="btn primary">查看项目作品</a>
+                    <a href="#projects" class="btn primary">查看核心项目</a>
                     <a href="mailto:vanseny@163.com" class="btn secondary">立即联系</a>
                 </div>
             </div>
@@ -59,19 +65,20 @@
             <div class="about-grid">
                 <div class="glass-card">
                     <h3>高级研发专家</h3>
-                    <p>7年深耕后端，精通 JVM、SQL 与中间件调优，擅长处理高并发难题。</p>
+                    <p>8年深耕后端，精通 JVM、SQL 与中间件调优，擅长处理高并发难题。</p>
                 </div>
                 <div class="glass-card highlight">
                     <h3>务实落地派</h3>
-                    <p>从 0 到 1 交付 3 套大型 SaaS 平台，对业务抽象与架构演进有深刻认知。</p>
+                    <p>从 0 到 1 交付 3 套大型 SaaS 平台，具备 180+ 区域代理商复杂体系治理经验。</p>
                 </div>
                 <div class="glass-card">
                     <h3>AI 探索者</h3>
-                    <p>具备 AI 工程化能力，善于利用 Agent 与 LLM 解决实际研发能效问题。</p>
+                    <p>具备 AI 工程化能力，善于利用 Agent 与 LLM 解决研发与业务能效问题。</p>
                 </div>
             </div>
         </section>
 
+        <!-- ... Skills Section remains same ... -->
         <section id="skills" class="section">
             <div class="section-header">
                 <h2>核心技能 <span>SKILLS</span></h2>
@@ -107,7 +114,7 @@
                     <div class="time">2025.08 - 至今</div>
                     <div class="content">
                         <h3>自主创业团队</h3>
-                        <p class="role">技术合伙人 (180+代理商体系 / 京东美团订单分发 / AI 供应链)</p>
+                        <p class="role">技术合伙人 (180+ 区域代理商体系 / 京东美团订单分发 / AI 供应链)</p>
                     </div>
                 </div>
                 <div class="timeline-item">
@@ -138,6 +145,7 @@
                         <p class="role">技术组长 (微服务化改造与高并发架构演进)</p>
                     </div>
                 </div>
+                <!-- Restored Early Experience -->
                 <div class="timeline-item">
                     <div class="time">2017.07 - 2020.07</div>
                     <div class="content">
@@ -158,45 +166,45 @@
                         <h3>DDMS AI 配送管理 SaaS</h3>
                         <span class="tag">旗舰项目</span>
                     </div>
-                    <p><strong>项目描述：</strong>面向同城即时配送的多租户 SaaS 平台，日订单规模 10w+。提供智能派单、实时轨迹监控与资金分账风控。</p>
-                    <p><strong>技术亮点：</strong>Netty+Protobuf 高频轨迹压缩比达 70%，基于 LiteFlow 实现流程规则热更新。</p>
+                    <p><strong>项目描述：</strong>面向同城配送的多租户 SaaS，覆盖 180+ 代理商。集成京东美团订单自动分发与 AI 调度。</p>
+                    <p><strong>技术亮点：</strong>Netty+Protobuf 高频点位压缩 70%、多平台网关支持。</p>
                     <div class="project-tech">
-                        <span>Java 21</span><span>Netty</span><span>AI Dispatch</span>
+                        <span>Java 21</span><span>Netty</span><span>Order Dispatch</span>
                     </div>
-                    <div class="card-footer">点击查看详情 <span class="arrow">→</span></div>
+                    <div class="card-footer">点击查看技术实现 <span class="arrow">→</span></div>
                 </div>
                 <div class="project-card glass-card ripple" data-project="kkb">
                     <div class="project-header">
-                        <h3>话费权益订单风控系统</h3>
+                        <h3>话费权益风控系统</h3>
                         <span class="tag">核心架构</span>
                     </div>
-                    <p>主导 KKB 话费权益代充风控。基于交易频率与假充率实现动态评分引擎，自动化处罚违规账号，风控性能提升 60%。</p>
+                    <p>支撑千万级业务。基于交易习惯与假充率实现动态评分与自动化处罚，风控性能提升 60%。</p>
                     <div class="project-tech">
                         <span>Risk Engine</span><span>Redis</span><span>Fegin</span>
                     </div>
-                    <div class="card-footer">点击查看详情 <span class="arrow">→</span></div>
+                    <div class="card-footer">点击查看技术实现 <span class="arrow">→</span></div>
                 </div>
                 <div class="project-card glass-card ripple" data-project="dow">
                     <div class="project-header">
-                        <h3>供应链 AI 赋能中心 (DOW)</h3>
+                        <h3>供应链 AI 赋能中心</h3>
                         <span class="tag">最新实践</span>
                     </div>
-                    <p>利用 Dify + RAG 架构落地 AI Agent 辅助决策，实现 7x24h 智能运维与需求波动预警。</p>
+                    <p>落地 Dify + RAG 架构的 AI Agent，支撑 7x24h 智能运维与需求波动预警，能效提升 30%。</p>
                     <div class="project-tech">
                         <span>Dify</span><span>Agent</span><span>Milvus</span>
                     </div>
-                    <div class="card-footer">点击查看详情 <span class="arrow">→</span></div>
+                    <div class="card-footer">点击查看技术实现 <span class="arrow">→</span></div>
                 </div>
                 <div class="project-card glass-card ripple" data-project="zhongtai">
                     <div class="project-header">
                         <h3>深能环保数智中台</h3>
                         <span class="tag">道衍时期</span>
                     </div>
-                    <p>集团级数据底座。攻克 SQL 算子下推优化使查询从 300s 降至 1s，主导 Flink 实时算力性能调优。</p>
+                    <p>集团级数据底座。攻克 SQL 算子下推优化从 300s 降至 1s，主导 Flink 实时算力调优。</p>
                     <div class="project-tech">
                         <span>Flink</span><span>DataHub</span><span>SQL 调优</span>
                     </div>
-                    <div class="card-footer">点击查看详情 <span class="arrow">→</span></div>
+                    <div class="card-footer">点击查看技术实现 <span class="arrow">→</span></div>
                 </div>
             </div>
         </section>
