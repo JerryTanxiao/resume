@@ -44,21 +44,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const projectData = {
         ddms: {
             title: "DDMS 智能配送管理 SaaS (2.0 AI版)",
-            desc: "面向同城即时配送的多租户 SaaS 平台，日订单 10w+。集成智能调度算法与 AI 需求预测。",
+            desc: "已覆盖 **180 个区域代理商**，深度集成 **京东到家、美团外卖** 订单分发接口，日订单规模 10w+。",
             tech: ["Java 21", "Spring Cloud", "Netty", "RocketMQ", "Python FastAPI"],
             details: `
                 <div class="modal-detail-grid">
                     <div class="detail-item">
-                        <h4>智能调度引擎</h4>
-                        <p>基于核心「时间顺路度 + 空间夹角」模型，通过 AI 需求预测动态调整派单权重，骑手满意度提升 40%。</p>
+                        <h4>多平台订单分发</h4>
+                        <p>封装标准化开放联通网关，实现对美团、京东等三方平台订单的毫秒级解析与代理商自动分账。</p>
                     </div>
                     <div class="detail-item">
                         <h4>高并发网关</h4>
                         <p>Netty + Protobuf 实现骑手位置每秒 10w+ 级接入，轨迹压缩率达 70%。</p>
                     </div>
                     <div class="detail-item">
-                        <h4>流程编排</h4>
-                        <p>LiteFlow 动态编排业务审批流，实现 0 停机业务规则热更新。</p>
+                        <h4>智能调度引擎</h4>
+                        <p>基于核心「时间顺路度 + 空间夹角」模型，通过 AI 需求预测动态调整派单权重。</p>
                     </div>
                 </div>
             `
