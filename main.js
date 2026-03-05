@@ -1,216 +1,142 @@
+const projectData = {
+    'ddms': {
+        title: 'DDMS AI 配送管理 SaaS (2.0 AI版)',
+        tech: 'Java 21 / Spring Cloud Alibaba / Netty / RocketMQ / MongoDB',
+        desc: `面向同城即时配送的 AI 驱动多租户 SaaS 平台，覆盖 180+ 区域代理商，集成京东、美团订单分发，日订单规模 10w+。<br><br>
+               <strong>核心亮点：</strong><br>
+               • 落地千万级轨迹消息积压深度治理（1000w/5min），通过建立隔离转储 Topic 与 16 路 Queue 实现线性扩容。<br>
+               • 部署 AI Agent 辅助运营，将 80% 人工重复咨询自动化，显著降低成本。<br>
+               • 基于 Seata 保障 180+ 租户的分布式财务对账零误差。`
+    },
+    'dow': {
+        title: 'DOW 供应链智能助手框架 (AI 核心研发)',
+        tech: 'Python / FastAPI / Dify Agent / PAD 协议 / Redis / FFmpeg',
+        desc: `自主研发的高性能机器人集成框架，具备双协议长连接与多模态交互能力，深度赋能配送体系。<br><br>
+               <strong>核心亮点：</strong><br>
+               • 自研 HTTP POST 回调机制替代传统轮询，降低 60% 服务器负载，实现消息毫秒级响应。<br>
+               • 深度集成 Dify API，支持 GPT/Claude 动态切换，落地 RAG 知识库辅助业务答疑。<br>
+               • 基于 FFmpeg 实现语音消息自动识别与 TTS 情感化答复，能效提升 30%。<br>
+               • 插件化管理系统，支持插件热重载与自动化朋友圈/任务处理。`
+    },
+    'mangaflow': {
+        title: 'MangaFlow AI — 小说分镜全流程助手',
+        tech: 'React 19 / TypeScript / Google Gemini SDK / AIGC / Tailwind',
+        desc: `针对漫剧生产设计的全链路 AIGC 工业化助手，实现从文学文本向制作级视觉描述全自动流转。<br><br>
+               <strong>核心亮点：</strong><br>
+               • 设计“灵感 -> 小说 -> 脚本 -> 分镜”的生成闭环，自动提取场景、动作与对白。<br>
+               • 自研 8 维度结构化提示词引擎，支持专业景别、镜头运用等指令输出。<br>
+               • 锁定角色一致性特征，输出不同艺术风格（电影感、水墨等）的视觉指令。`
+    },
+    'kkb': {
+        title: '客客帮 —— 话费权益订单全链路风控系统',
+        tech: 'Java 17 / Spring Cloud / Redis / RocketMQ / Feign',
+        desc: `支撑千万级话费/权益卡代充业务的全链路风控，保障平台交易安全。<br><br>
+               <strong>核心亮点：</strong><br>
+               • 主导动态风控策略引擎，实现根据交易频率等指标的阶梯式额度管控。<br>
+               • 实现自动化处罚中心，对高风险账号进行实时权限剥夺，准确率达 99.9%。<br>
+               • 针对风控指标大表统计，设计多级缓存与 SQL 调优，提升校验性能 60%。`
+    },
+    'zhongtai': {
+        title: '深能环保数智中台 (数智中心)',
+        tech: 'Flink / MySQL 调优 / DataWorks / SQL 物理优化',
+        desc: `WIS 交易/分析数据分离及全量流批一体计算底座建设，聚焦指标定义与实时计算。<br><br>
+               <strong>核心亮点：</strong><br>
+               • 主导设计动态多指标计算合并算法，实现拖拽式自动转换 Flink 任务。<br>
+               • 解决 Flink 数据漂移难题，优化作业 CU 调度逻辑保障数据一致性。<br>
+               • 针对 MySQL 视图索引下推失效，深度优化 SQL 物理计划，由 300s 降至 1s。`
+    },
+    'wuwei': {
+        title: '无为教育 —— 金融教育信息化系统',
+        tech: 'RocketMQ 源码 / 时间轮 / 微服务治理 / 直播架构',
+        desc: `支撑 10w+ 在线直播的高并发教育平台，保障 10 亿级营收业务稳定性。<br><br>
+               <strong>核心亮点：</strong><br>
+               • 主导高并发直播系统建设，实现百万级订单转化预测与实时转单埋点。<br>
+               • 基于时间轮算法对 RocketMQ 进行源码级二次开发，实现私有化自定义延迟队列。<br>
+               • 主导单体向微服务剥离，实现小程序到支付的自动化平滑切换，提升流水化部署效率。`
+    },
+    'xiudian': {
+        title: '咻电员工管理 & 商城 SaaS 系统',
+        tech: 'Netty / Protobuf / 纠偏算法 / IoT 轨迹处理',
+        desc: `主导千万级 MQ 轨迹积压治理与高并发 IoT 位置服务架构。<br><br>
+               <strong>核心亮点：</strong><br>
+               • 通过隔离 Topic 与 16 路 Queue 线性分摊压力，彻底解决 1000w 轨迹洪水导致的 OOM。<br>
+               • 独立实现每日 50w 级工单自动派发机制，减少 80% 人工干预。<br>
+               • 基于 Netty + Protobuf 压缩 70% 带宽，引入纠偏算法将轨迹误差控制在米级。`
+    }
+};
+
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Reveal animation on scroll with staggered effect
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry, index) => {
-            if (entry.isIntersecting) {
-                setTimeout(() => {
-                    entry.target.classList.add('visible');
-                }, index * 100);
+    // Reveal animation
+    const reveals = document.querySelectorAll('.fade-in');
+    
+    const reveal = () => {
+        reveals.forEach(element => {
+            const windowHeight = window.innerHeight;
+            const elementTop = element.getBoundingClientRect().top;
+            const elementVisible = 150;
+            
+            if (elementTop < windowHeight - elementVisible) {
+                element.classList.add('active');
             }
         });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('.section, .glass-card, .timeline-item').forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(30px)';
-        el.style.transition = 'all 1s cubic-bezier(0.19, 1, 0.22, 1)';
-        observer.observe(el);
-    });
-
-    // 2. Cursor Follower Blob with smooth lag
-    const blob = document.querySelector('.cursor-blob');
-    let mouseX = 0, mouseY = 0, curX = 0, curY = 0;
-    
-    document.addEventListener('mousemove', (e) => {
-        mouseX = e.clientX;
-        mouseY = e.clientY;
-    });
-
-    function animate() {
-        curX += (mouseX - curX) * 0.1;
-        curY += (mouseY - curY) * 0.1;
-        if (blob) {
-            blob.style.transform = `translate(${curX - 200}px, ${curY - 200}px)`;
-        }
-        requestAnimationFrame(animate);
-    }
-    animate();
-
-    // 3. Project Modal Interaction
-    const modal = document.getElementById('project-modal');
-    const modalBody = document.getElementById('modal-body');
-    const closeBtn = document.querySelector('.close-modal');
-
-    const projectData = {
-        ddms: {
-            title: "DDMS 智能配送管理 SaaS (2.0 AI版)",
-            desc: "已覆盖 **180 个区域代理商**。集成京东、美团外卖等多端订单分发，深度落地了 **AI 运力预测** 与千万级消息积压深度治理方案。",
-            tech: ["Java 21", "AI 预测", "AliCloud MQ", "Seata", "Netty"],
-            details: `
-                <div class="modal-detail-grid">
-                    <div class="detail-item">
-                        <h4>AI 运力预测中心</h4>
-                        <p>集成 DOW 框架的预测模型，对配送高峰进行精准预判，并自动下发运力平衡策略，提升整体配送时效 15%。</p>
-                    </div>
-                    <div class="detail-item">
-                        <h4>千万级消息积压深度治理</h4>
-                        <p>针对骑手高频轨迹洪峰，通过建立「隔离转储 Topic」及扩容 16 路独立 MessageQueue，彻底解决 OOM 问题。</p>
-                    </div>
-                    <div class="detail-item">
-                        <h4>高频 IoT 轨迹平滑纠偏</h4>
-                        <p>利用 Netty+Protobuf 实现极速接入。针对基站切换导致的轨迹分叉，引入经纬度压缩平滑纠偏算法，解决米级偏差。</p>
-                    </div>
-                </div>
-            `
-        },
-        dow: {
-            title: "DOW 供应链智能助手框架 — 自主研发",
-            desc: "高性能机器人集成框架，具备双协议长连接与多模态交互能力。深度集成 Dify Agent，实现了全自动的智能运营体系。",
-            tech: ["Python", "FastAPI", "Dify Agent", "PAD 协议", "FFmpeg", "Redis"],
-            details: `
-                <div class="modal-detail-grid">
-                    <div class="detail-item">
-                        <h4>双协议支持与高效回调机制</h4>
-                        <p>支持 849/855 协议；自研 HTTP POST 回调机制替代传统轮询，降低 60% 服务器负载，实现消息毫秒级响应。</p>
-                    </div>
-                    <div class="detail-item">
-                        <h4>Dify Agent 深度集成</h4>
-                        <p>利用 Dify API 实现工具调用（Function Calling），支持 GPT/Claude 动态切换；落地私有知识库 (RAG) 辅助业务答疑。</p>
-                    </div>
-                    <div class="detail-item">
-                        <h4>多模态消息处理</h4>
-                        <p>基于 FFmpeg 实现语音消息自动识别与 TTS 情感化答复；支持图文多轮对话理解，能效提升 30%。</p>
-                    </div>
-                    <div class="detail-item">
-                        <h4>插件化管理后台</h4>
-                        <p>基于 FastAPI 开发，支持插件动态挂载与热重载，集成朋友圈自动监控及自动化任务治理。 </p>
-                    </div>
-                </div>
-            `
-        },
-        kkb: {
-            title: "话费权益订单全链路风控系统",
-            desc: "主导千万级业务流量下的多租户架构。基于 7 日交易频率实现 5 级动态评级引擎。",
-            tech: ["Risk Engine", "Redis", "Fegin", "SkyWalking"],
-            details: `
-                <div class="modal-detail-grid">
-                    <div class="detail-item">
-                        <h4>动态评分与秒级处罚</h4>
-                        <p>风控预警触发后，秒级联动权限中心执行锁定账号、限制登录、限制提现等自动化处罚逻辑，准确率 99.9%。</p>
-                    </div>
-                    <div class="detail-item">
-                        <h4>全链路指标监控</h4>
-                        <p>实时监测假充率、30 天投诉率等核心业务指标，异常发现延时降至秒级。</p>
-                    </div>
-                </div>
-            `
-        },
-        zhongtai: {
-            title: "深能环保数智中台 (数智中心)",
-            desc: "技术负责人（带领 10 人小组）。攻克 WIS 交易型数据分离与指标计算下推调优难题。",
-            tech: ["Flink", "MySQL 调优", "DataWorks", "DolphinScheduler"],
-            details: `
-                <div class="modal-detail-grid">
-                    <div class="detail-item">
-                        <h4>SQL 指标下推与 Flink 调优</h4>
-                        <p>解决 MySQL 8.0 视图索引下推失效问题，将 300s 慢查询降至 1s；治理 Flink CU 过高导致的数据漂移偏差。</p>
-                    </div>
-                    <div class="detail-item">
-                        <h4>千万级维度反向检索</h4>
-                        <p>设计热处理、规则池及热缓存命中机制，实现从 1000w 级维度值中秒级精准定位关联指标。</p>
-                    </div>
-                </div>
-            `
-        },
-        wuwei: {
-            title: "无为教育金融信息化系统 (10亿级营收支撑)",
-            desc: "技术组长（管理 15+ 团队）。利用 **时间轮算法** 对 RocketMQ 进行了源码级二次开发，实现自主可控的延迟队列。",
-            tech: ["RocketMQ 源码开发", "时间轮算法", "JProfiler", "Python 自动化", "10w+ 在线直播"],
-            details: `
-                <div class="modal-detail-grid">
-                    <div class="detail-item">
-                        <h4>RocketMQ 源码级自定义</h4>
-                        <p>针对私有化环境与商业版成本限制，基于时间轮原理重写延迟消息逻辑，完美解决业务溯源与环境部署难题。</p>
-                    </div>
-                    <div class="detail-item">
-                        <h4>10w+ 并发直播系统</h4>
-                        <p>支持 10w+ 在线聊天、百万级直播回放及实时转单分析，将运营人效（LRO）从 0.8 提升至 1.5。</p>
-                    </div>
-                </div>
-            `
-        },
-        xiudian: {
-            title: "咻电员工管理 & 商城 SaaS 生态",
-            desc: "技术组长。主导千万级 MQ 积压专项治理，确保高并发 IoT 核心业务与自动清分系统的稳定性。",
-            tech: ["Netty", "Protobuf", "AliCloud MQ", "轨迹纠偏"],
-            details: `
-                <div class="modal-detail-grid">
-                    <div class="detail-item">
-                        <h4>1000w MQ 积压专项治理</h4>
-                        <p>针对突发流量导致的系统崩溃，通过建立物理转储 Topic、扩容 16 路独立 MQ 队列线性分摊压力，彻底解决 OOM 问题。</p>
-                    </div>
-                    <div class="detail-item">
-                        <h4>高并发 IoT 位置轨迹服务</h4>
-                        <p>基于 Netty + Protobuf 实现。针对边缘信号引入 **经纬度压缩平滑纠偏算法**，精准纠偏轨迹分叉难题。</p>
-                    </div>
-                </div>
-            `
-        }
     };
 
-    document.querySelectorAll('.project-card').forEach(card => {
-        card.addEventListener('click', (e) => {
-            e.preventDefault(); // Ensure it doesn't navigate if it's an 'a' tag
-            const pid = card.getAttribute('data-project');
-            const data = projectData[pid];
-            if (!data) return;
+    window.addEventListener('scroll', reveal);
+    reveal(); // Initial check
 
-            modalBody.innerHTML = `
-                <h2 style="color: var(--primary-color); margin-bottom: 1rem;">${data.title}</h2>
-                <div class="modal-tech-stack" style="margin-bottom: 2rem;">
-                    ${data.tech.map(t => `<span class="badge" style="margin-right: 0.5rem; margin-bottom: 0.5rem; background: rgba(0,242,255,0.1); border: 1px solid var(--primary-color); padding: 2px 8px; border-radius: 4px;">${t}</span>`).join('')}
-                </div>
-                <p style="font-size: 1.1rem; margin-bottom: 2rem; color: var(--text-secondary);">${data.desc}</p>
-                <hr style="border: none; border-top: 1px solid var(--border-color); margin: 2rem 0;">
-                ${data.details}
-            `;
-            modal.style.display = 'block';
-            document.body.style.overflow = 'hidden';
+    // Project Modal Logic
+    const modal = document.getElementById('project-modal');
+    const modalBody = document.getElementById('modal-body');
+    const cards = document.querySelectorAll('.project-card');
+    const closeBtn = document.querySelector('.close-modal');
+
+    cards.forEach(card => {
+        card.addEventListener('click', () => {
+            const projectId = card.getAttribute('data-project');
+            const data = projectData[projectId];
+            
+            if (data) {
+                modalBody.innerHTML = `
+                    <div class="modal-header">
+                        <h2>${data.title}</h2>
+                        <div class="tech-stack">${data.tech.split(' / ').map(t => `<span>${t}</span>`).join('')}</div>
+                    </div>
+                    <div class="modal-description">
+                        ${data.desc}
+                    </div>
+                `;
+                modal.style.display = 'block';
+                document.body.style.overflow = 'hidden'; // Prevent scrolling
+            }
         });
     });
 
-    closeBtn.onclick = () => {
+    const closeModal = () => {
         modal.style.display = 'none';
         document.body.style.overflow = 'auto';
     };
 
-    window.onclick = (e) => {
-        if (e.target === modal) {
-            modal.style.display = 'none';
-            document.body.style.overflow = 'auto';
-        }
-    };
+    closeBtn.addEventListener('click', closeModal);
+    window.addEventListener('click', (e) => {
+        if (e.target === modal) closeModal();
+    });
 
-    // 4. Custom keyframes injected
-    const styleTag = document.createElement('style');
-    styleTag.innerHTML = `
-        .visible {
-            opacity: 1 !important;
-            transform: translateY(0) !important;
-        }
-        .modal-detail-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-        }
-        .detail-item h4 {
-            color: var(--primary-color);
-            margin-bottom: 0.5rem;
-        }
-        .detail-item p {
-            font-size: 0.9rem;
-            color: var(--text-secondary);
-        }
-    `;
-    document.head.appendChild(styleTag);
+    // Ripple Effect
+    const ripples = document.querySelectorAll('.ripple');
+    ripples.forEach(button => {
+        button.addEventListener('click', function(e) {
+            let x = e.clientX - e.target.offsetLeft;
+            let y = e.clientY - e.target.offsetTop;
+            
+            let ripple = document.createElement('span');
+            ripple.style.left = x + 'px';
+            ripple.style.top = y + 'px';
+            ripple.classList.add('ripple-effect');
+            this.appendChild(ripple);
+            
+            setTimeout(() => {
+                ripple.remove();
+            }, 600);
+        });
+    });
 });
