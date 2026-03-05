@@ -98,35 +98,35 @@ document.addEventListener('DOMContentLoaded', () => {
             `
         },
         wuwei: {
-            title: "无为教育金融信息化系统",
-            desc: "技术组长（管理 15+ 团队）。承载 10 亿级年营收的高并发直播与营销体系架构演进。",
-            tech: ["RocketMQ 源码开发", "时间轮算法", "JProfiler", "Python 自动化"],
+            title: "无为教育金融信息化系统 (10亿级营收支撑)",
+            desc: "技术组长（管理 15+ 团队）。利用 **时间轮算法** 对 RocketMQ 进行了源码级二次开发，实现自主可控的延迟队列。",
+            tech: ["RocketMQ 源码开发", "时间轮算法", "JProfiler", "Python 自动化", "10w+ 在线直播"],
             details: `
                 <div class="modal-detail-grid">
                     <div class="detail-item">
-                        <h4>RocketMQ 源码级二次开发</h4>
-                        <p>由于早期私有化部署环境缺乏高级延迟队列支持且商业版成本高昂，利用 **时间轮技术** 对 RocketMQ 进行源码级定制，实现完全自主可控的延迟消息链路。</p>
+                        <h4>RocketMQ 源码级自定义</h4>
+                        <p>针对私有化环境与商业版成本限制，基于时间轮原理重写延迟消息逻辑，完美解决业务溯源与环境部署难题。</p>
                     </div>
                     <div class="detail-item">
-                        <h4>10w+ 在线直播与埋点画像</h4>
-                        <p>设计支持 10w+ 同时在线观看的直播架构；通过埋点分析词频分析，将运营人效（LRO）从 0.8 提升至 1.5。</p>
+                        <h4>10w+ 并发直播系统</h4>
+                        <p>支持 10w+ 在线聊天、百万级直播回放及实时转单分析，将运营人效（LRO）从 0.8 提升至 1.5。</p>
                     </div>
                 </div>
             `
         },
         xiudian: {
             title: "咻电员工管理 & 商城 SaaS 生态",
-            desc: "技术组长。主导千万级 MQ 积压专项治理及 IoT 轨迹纠偏核心算法落地。",
-            tech: ["Netty", "Protobuf", "AliCloud MQ", "Kettle"],
+            desc: "技术组长。主导千万级 MQ 积压专项治理，确保高并发 IoT 核心业务与自动清分系统的稳定性。",
+            tech: ["Netty", "Protobuf", "AliCloud MQ", "轨迹纠偏"],
             details: `
                 <div class="modal-detail-grid">
                     <div class="detail-item">
-                        <h4>1000w MQ 积压物理转储方案</h4>
-                        <p>新建 Topic 并转储至 16 个 MessageQueue 线性分摊压力，配合批处理 Pull 模式彻底解决 QPS 打满导致的崩溃。</p>
+                        <h4>1000w MQ 积压专项治理</h4>
+                        <p>针对突发流量导致的系统崩溃，通过建立物理转储 Topic、扩容 16 路独立 MQ 队列线性分摊压力，彻底解决 OOM 问题。</p>
                     </div>
                     <div class="detail-item">
-                        <h4>IoT 位置平滑纠偏算法</h4>
-                        <p>Protobuf 压缩 70% 流量；引入经纬度压缩平滑算法解决基站干扰导致的轨迹误差，精准度达米级。</p>
+                        <h4>高并发 IoT 位置轨迹服务</h4>
+                        <p>基于 Netty + Protobuf 实现。针对边缘信号引入 **经纬度压缩平滑纠偏算法**，精准纠偏轨迹分叉难题。</p>
                     </div>
                 </div>
             `
