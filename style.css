@@ -231,7 +231,7 @@ body {
 
 .btn.primary {
     background: var(--primary-color);
-    color: #000;
+    color: #000 !important; /* 强制黑色文字，确保在青色背景下可见 */
     box-shadow: 0 0 20px rgba(0, 242, 255, 0.2);
 }
 
