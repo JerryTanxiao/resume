@@ -123,6 +123,19 @@ body {
     text-shadow: 0 0 10px var(--primary-color);
 }
 
+.nav-links a.nav-highlight {
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    padding: 0.4rem 1rem;
+    border-radius: 4px;
+    background: rgba(0, 242, 255, 0.05);
+}
+
+.nav-links a.nav-highlight:hover {
+    background: var(--primary-color);
+    color: #000;
+}
+
 /* Base Layout */
 main {
     max-width: 1200px;
@@ -234,6 +247,18 @@ main {
     border: 1px solid var(--primary-color);
     box-shadow: 0 0 50px rgba(0, 242, 255, 0.2);
     position: relative;
+}
+
+/* Modal Meta */
+.modal-footer {
+    margin-top: 3rem;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.btn-sm {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.85rem;
 }
 
 .close-modal {

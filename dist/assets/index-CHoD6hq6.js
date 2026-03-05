@@ -1,4 +1,4 @@
-(function(){const r=document.createElement("link").relList;if(r&&r.supports&&r.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))d(e);new MutationObserver(e=>{for(const t of e)if(t.type==="childList")for(const s of t.addedNodes)s.tagName==="LINK"&&s.rel==="modulepreload"&&d(s)}).observe(document,{childList:!0,subtree:!0});function l(e){const t={};return e.integrity&&(t.integrity=e.integrity),e.referrerPolicy&&(t.referrerPolicy=e.referrerPolicy),e.crossOrigin==="use-credentials"?t.credentials="include":e.crossOrigin==="anonymous"?t.credentials="omit":t.credentials="same-origin",t}function d(e){if(e.ep)return;e.ep=!0;const t=l(e);fetch(e.href,t)}})();document.addEventListener("DOMContentLoaded",()=>{const c=new IntersectionObserver(i=>{i.forEach((n,o)=>{n.isIntersecting&&setTimeout(()=>{n.target.classList.add("visible")},o*100)})},{threshold:.1});document.querySelectorAll(".section, .glass-card, .timeline-item").forEach(i=>{i.style.opacity="0",i.style.transform="translateY(30px)",i.style.transition="all 1s cubic-bezier(0.19, 1, 0.22, 1)",c.observe(i)});const r=document.querySelector(".cursor-blob");let l=0,d=0,e=0,t=0;document.addEventListener("mousemove",i=>{l=i.clientX,d=i.clientY});function s(){e+=(l-e)*.1,t+=(d-t)*.1,r&&(r.style.transform=`translate(${e-200}px, ${t-200}px)`),requestAnimationFrame(s)}s();const a=document.getElementById("project-modal"),p=document.getElementById("modal-body"),u=document.querySelector(".close-modal"),y={ddms:{title:"DDMS 智能配送管理 SaaS (2.0 AI版)",desc:"面向同城即时配送的多租户 SaaS 平台，日订单 10w+。集成智能调度算法与 AI 需求预测。",tech:["Java 21","Spring Cloud","Netty","RocketMQ","Python FastAPI"],details:`
+(function(){const r=document.createElement("link").relList;if(r&&r.supports&&r.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))d(e);new MutationObserver(e=>{for(const t of e)if(t.type==="childList")for(const s of t.addedNodes)s.tagName==="LINK"&&s.rel==="modulepreload"&&d(s)}).observe(document,{childList:!0,subtree:!0});function l(e){const t={};return e.integrity&&(t.integrity=e.integrity),e.referrerPolicy&&(t.referrerPolicy=e.referrerPolicy),e.crossOrigin==="use-credentials"?t.credentials="include":e.crossOrigin==="anonymous"?t.credentials="omit":t.credentials="same-origin",t}function d(e){if(e.ep)return;e.ep=!0;const t=l(e);fetch(e.href,t)}})();document.addEventListener("DOMContentLoaded",()=>{const c=new IntersectionObserver(i=>{i.forEach((a,o)=>{a.isIntersecting&&setTimeout(()=>{a.target.classList.add("visible")},o*100)})},{threshold:.1});document.querySelectorAll(".section, .glass-card, .timeline-item").forEach(i=>{i.style.opacity="0",i.style.transform="translateY(30px)",i.style.transition="all 1s cubic-bezier(0.19, 1, 0.22, 1)",c.observe(i)});const r=document.querySelector(".cursor-blob");let l=0,d=0,e=0,t=0;document.addEventListener("mousemove",i=>{l=i.clientX,d=i.clientY});function s(){e+=(l-e)*.1,t+=(d-t)*.1,r&&(r.style.transform=`translate(${e-200}px, ${t-200}px)`),requestAnimationFrame(s)}s();const n=document.getElementById("project-modal"),p=document.getElementById("modal-body"),u=document.querySelector(".close-modal"),y={ddms:{title:"DDMS 智能配送管理 SaaS (2.0 AI版)",desc:"面向同城即时配送的多租户 SaaS 平台，日订单 10w+。集成智能调度算法与 AI 需求预测。",tech:["Java 21","Spring Cloud","Netty","RocketMQ","Python FastAPI"],details:`
                 <div class="modal-detail-grid">
                     <div class="detail-item">
                         <h4>智能调度引擎</h4>
@@ -46,15 +46,19 @@
                         <p>主导 Flink 流批一体算力调优，支撑千万级数据维度毫秒级反向定位。</p>
                     </div>
                 </div>
-            `}};document.querySelectorAll(".project-card").forEach(i=>{i.addEventListener("click",()=>{const n=i.getAttribute("data-project"),o=y[n];o&&(p.innerHTML=`
+            `}};document.querySelectorAll(".project-card").forEach(i=>{i.addEventListener("click",()=>{const a=i.getAttribute("data-project"),o=y[a];o&&(p.innerHTML=`
                 <h2 style="color: var(--primary-color); margin-bottom: 1rem;">${o.title}</h2>
                 <div class="modal-tech-stack" style="margin-bottom: 2rem;">
                     ${o.tech.map(h=>`<span class="badge" style="margin-right: 0.5rem; margin-bottom: 0.5rem;">${h}</span>`).join("")}
                 </div>
                 <p style="font-size: 1.1rem; margin-bottom: 2rem;">${o.desc}</p>
-                <hr style="border: none; border-top: 1px solid var(--border-color); margin-bottom: 2rem;">
+                <div class="modal-footer">
+                    ${a==="ddms"||a==="dow"?'<a href="https://gitee.com/vanseny/easy-utils" target="_blank" class="btn primary btn-sm">访问 Gitee 开源库</a>':""}
+                    <a href="https://blog.csdn.net/qq_20282955" target="_blank" class="btn secondary btn-sm">查看技术博客</a>
+                </div>
+                <hr style="border: none; border-top: 1px solid var(--border-color); margin: 2rem 0;">
                 ${o.details}
-            `,a.style.display="block",document.body.style.overflow="hidden")})}),u.onclick=()=>{a.style.display="none",document.body.style.overflow="auto"},window.onclick=i=>{i.target===a&&(a.style.display="none",document.body.style.overflow="auto")};const m=document.createElement("style");m.innerHTML=`
+            `,n.style.display="block",document.body.style.overflow="hidden")})}),u.onclick=()=>{n.style.display="none",document.body.style.overflow="auto"},window.onclick=i=>{i.target===n&&(n.style.display="none",document.body.style.overflow="auto")};const m=document.createElement("style");m.innerHTML=`
         .visible {
             opacity: 1 !important;
             transform: translateY(0) !important;

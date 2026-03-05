@@ -128,7 +128,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     ${data.tech.map(t => `<span class="badge" style="margin-right: 0.5rem; margin-bottom: 0.5rem;">${t}</span>`).join('')}
                 </div>
                 <p style="font-size: 1.1rem; margin-bottom: 2rem;">${data.desc}</p>
-                <hr style="border: none; border-top: 1px solid var(--border-color); margin-bottom: 2rem;">
+                <div class="modal-footer">
+                    ${pid === 'ddms' || pid === 'dow' ? `<a href="https://gitee.com/vanseny/easy-utils" target="_blank" class="btn primary btn-sm">访问 Gitee 开源库</a>` : ''}
+                    <a href="https://blog.csdn.net/qq_20282955" target="_blank" class="btn secondary btn-sm">查看技术博客</a>
+                </div>
+                <hr style="border: none; border-top: 1px solid var(--border-color); margin: 2rem 0;">
                 ${data.details}
             `;
             modal.style.display = 'block';
