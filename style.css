@@ -286,11 +286,23 @@ main {
     height: 100vh;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.hero-content {
+    flex: 1;
+    min-width: 0;
 }
 
 .hero-content h1 {
-    font-size: 6rem;
+    font-size: 5rem;
     margin-bottom: 2rem;
+    line-height: 1.1;
+}
+
+.hero-visual {
+    flex-shrink: 0;
 }
 
 /* Skills Tags */
@@ -326,5 +338,9 @@ main {
 /* Mobile Tweaks */
 @media (max-width: 768px) {
     .modal-content { width: 95%; padding: 1.5rem; }
-    .hero-content h1 { font-size: 3.5rem; }
+    .hero-section { flex-direction: column; text-align: center; justify-content: center; padding-top: 80px; }
+    .hero-content h1 { font-size: 3rem; }
+    .hero-visual { display: none; }
+    .nav-links { display: none; }
+    .hero-cta { justify-content: center; }
 }
