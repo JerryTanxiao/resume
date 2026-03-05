@@ -7,8 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
-  <script type="module" crossorigin src="/assets/index-oojhWZ3m.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-BwnGJ1RM.css">
+  <script type="module" crossorigin src="/assets/index--Cv_zLRS.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-CI5UKVss.css">
 </head>
 <body>
     <div class="cursor-blob"></div>
@@ -146,17 +146,7 @@
                 <h2>项目经验 <span>PROJECTS</span></h2>
             </div>
             <div class="project-grid">
-                <div class="project-card glass-card highlight">
-                    <div class="project-header">
-                        <h3>话费权益订单风控系统</h3>
-                        <span class="tag">核心架构</span>
-                    </div>
-                    <p>主导 KKB 话费权益代充风控。基于交易频率与假充率实现动态评分引擎，自动化处罚违规账号，风控性能提升 60%。</p>
-                    <div class="project-tech">
-                        <span>Risk Engine</span><span>Redis</span><span>Fegin</span>
-                    </div>
-                </div>
-                <div class="project-card glass-card highlight">
+                <div class="project-card glass-card highlight ripple" data-project="ddms">
                     <div class="project-header">
                         <h3>DDMS AI 配送管理 SaaS</h3>
                         <span class="tag">旗舰项目</span>
@@ -166,28 +156,58 @@
                     <div class="project-tech">
                         <span>Java 21</span><span>Netty</span><span>AI Dispatch</span>
                     </div>
+                    <div class="card-footer">点击查看详情 <span class="arrow">→</span></div>
                 </div>
-                <div class="project-card glass-card">
-                    <h3>深能环保数智中台</h3>
-                    <p>集团级数据底座调优。SQL 算子下推优化从 300s 降至 1s，Flink 算力深度性能调优。</p>
-                    <div class="project-tech">
-                        <span>Flink</span><span>SQL Tuning</span><span>MySQL 8.0</span>
+                <div class="project-card glass-card ripple" data-project="kkb">
+                    <div class="project-header">
+                        <h3>话费权益订单风控系统</h3>
+                        <span class="tag">核心架构</span>
                     </div>
+                    <p>主导 KKB 话费权益代充风控。基于交易频率与假充率实现动态评分引擎，自动化处罚违规账号，风控性能提升 60%。</p>
+                    <div class="project-tech">
+                        <span>Risk Engine</span><span>Redis</span><span>Fegin</span>
+                    </div>
+                    <div class="card-footer">点击查看详情 <span class="arrow">→</span></div>
                 </div>
-                <div class="project-card glass-card">
-                    <h3>供应链 AI 赋能中心</h3>
-                    <p>落地 Dify + RAG 架构的 AI Agent，驱动研发与运维能效提升 30%。</p>
+                <div class="project-card glass-card ripple" data-project="dow">
+                    <div class="project-header">
+                        <h3>供应链 AI 赋能中心 (DOW)</h3>
+                        <span class="tag">最新实践</span>
+                    </div>
+                    <p>利用 Dify + RAG 架构落地 AI Agent 辅助决策，实现 7x24h 智能运维与需求波动预警。</p>
                     <div class="project-tech">
                         <span>Dify</span><span>Agent</span><span>Milvus</span>
                     </div>
+                    <div class="card-footer">点击查看详情 <span class="arrow">→</span></div>
+                </div>
+                <div class="project-card glass-card ripple" data-project="zhongtai">
+                    <div class="project-header">
+                        <h3>深能环保数智中台</h3>
+                        <span class="tag">道衍时期</span>
+                    </div>
+                    <p>集团级数据底座。攻克 SQL 算子下推优化使查询从 300s 降至 1s，主导 Flink 实时算力性能调优。</p>
+                    <div class="project-tech">
+                        <span>Flink</span><span>DataHub</span><span>SQL 调优</span>
+                    </div>
+                    <div class="card-footer">点击查看详情 <span class="arrow">→</span></div>
                 </div>
             </div>
         </section>
     </main>
 
+    <!-- Project Detail Modal -->
+    <div id="project-modal" class="modal">
+        <div class="modal-content glass-card">
+            <span class="close-modal">&times;</span>
+            <div id="modal-body">
+                <!-- Content will be injected by JS -->
+            </div>
+        </div>
+    </div>
+
     <footer id="contact">
         <div class="footer-content">
-            <p>如果您正在寻找一名具备 AI 赋能实战经验的高级 Java 架构师，期待与您进一步沟通。</p>
+            <p>如果您正在寻找一名具备 AI 赋能实战经验的资深 Java 架构师，期待与您进一步沟通。</p>
             <div class="contact-links">
                 <a href="mailto:vanseny@163.com">vanseny@163.com</a>
                 <span>|</span>
