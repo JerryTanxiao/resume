@@ -1,17 +1,17 @@
 const projectData = {
     'ddms': {
-        title: 'DDMS AI 配送管理 SaaS (2.0 AI版)',
+        title: 'DDMS 智能配送管理 SaaS (2.0 AI版)',
         tech: 'Java 21 / Spring Cloud Alibaba / Netty / RocketMQ / MongoDB',
-        desc: `面向同城即时配送的 AI 驱动多租户 SaaS 平台，覆盖 180+ 区域代理商，集成京东、美团订单分发，日订单规模 10w+。<br><br>
+        desc: `面向同城即时配送的 AI 驱动多租户 SaaS 平台，已覆盖 180+ 区域代理商，集成京东、美团订单分发，日订单规模 10w+。<br><br>
                <strong>核心亮点：</strong><br>
                • 落地千万级轨迹消息积压深度治理（1000w/5min），通过建立隔离转储 Topic 与 16 路 Queue 实现线性扩容。<br>
                • 部署 AI Agent 辅助运营，将 80% 人工重复咨询自动化，显著降低成本。<br>
-               • 基于 Seata 保障 180+ 租户的分布式财务对账零误差。`
+               • 复杂代理结算机制：利用 Seata 保障 180+ 租户的分布式财务对账零误差。`
     },
     'dow': {
         title: 'DOW 供应链智能助手框架 (AI 核心研发)',
         tech: 'Python / FastAPI / Dify Agent / PAD 协议 / Redis / FFmpeg',
-        desc: `自主研发的高性能机器人集成框架，具备双协议长连接与多模态交互能力，深度赋能配送体系。<br><br>
+        desc: `自主研发的高性能机器人集成框架，具备双协议长连接与多模态交互能力，实现全自动智能运营。<br><br>
                <strong>核心亮点：</strong><br>
                • 自研 HTTP POST 回调机制替代传统轮询，降低 60% 服务器负载，实现消息毫秒级响应。<br>
                • 深度集成 Dify API，支持 GPT/Claude 动态切换，落地 RAG 知识库辅助业务答疑。<br>
@@ -20,7 +20,7 @@ const projectData = {
     },
     'mangaflow': {
         title: 'MangaFlow AI — 小说分镜全流程助手',
-        tech: 'React 19 / TypeScript / Google Gemini SDK / AIGC / Tailwind',
+        tech: 'React 19 / TypeScript / Google Gemini SDK / AIGC / Tailwind CSS',
         desc: `针对漫剧生产设计的全链路 AIGC 工业化助手，实现从文学文本向制作级视觉描述全自动流转。<br><br>
                <strong>核心亮点：</strong><br>
                • 设计“灵感 -> 小说 -> 脚本 -> 分镜”的生成闭环，自动提取场景、动作与对白。<br>
@@ -29,7 +29,7 @@ const projectData = {
     },
     'kkb': {
         title: '客客帮 —— 话费权益订单全链路风控系统',
-        tech: 'Java 17 / Spring Cloud / Redis / RocketMQ / Feign',
+        tech: 'Java 17 / Spring Cloud / Redis / RocketMQ / MySQL',
         desc: `支撑千万级话费/权益卡代充业务的全链路风控，保障平台交易安全。<br><br>
                <strong>核心亮点：</strong><br>
                • 主导动态风控策略引擎，实现根据交易频率等指标的阶梯式额度管控。<br>
@@ -48,9 +48,9 @@ const projectData = {
     'wuwei': {
         title: '无为教育 —— 金融教育信息化系统',
         tech: 'RocketMQ 源码 / 时间轮 / 微服务治理 / 直播架构',
-        desc: `支撑 10w+ 在线直播的高并发教育平台，保障 10 亿级营收业务稳定性。<br><br>
+        desc: `支撑 10w+ 在线直播的高并发教育平台，保障 1 亿级营收业务稳定性。<br><br>
                <strong>核心亮点：</strong><br>
-               • 主导高并发直播系统建设，实现百万级订单转化预测与实时转单埋点。<br>
+               • 主导 10w+ 级直播聊天室架构，支持 10w 同时在线观看、100w 订单转化预测。<br>
                • 基于时间轮算法对 RocketMQ 进行源码级二次开发，实现私有化自定义延迟队列。<br>
                • 主导单体向微服务剥离，实现小程序到支付的自动化平滑切换，提升流水化部署效率。`
     },
@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     window.addEventListener('scroll', reveal);
-    reveal(); // Initial check
+    reveal();
 
     // Project Modal Logic
     const modal = document.getElementById('project-modal');
@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                 `;
                 modal.style.display = 'block';
-                document.body.style.overflow = 'hidden'; // Prevent scrolling
+                document.body.style.overflow = 'hidden';
             }
         });
     });
@@ -125,8 +125,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const ripples = document.querySelectorAll('.ripple');
     ripples.forEach(button => {
         button.addEventListener('click', function(e) {
-            let x = e.clientX - e.target.offsetLeft;
-            let y = e.clientY - e.target.offsetTop;
+            let rect = e.target.getBoundingClientRect();
+            let x = e.clientX - rect.left;
+            let y = e.clientY - rect.top;
             
             let ripple = document.createElement('span');
             ripple.style.left = x + 'px';
