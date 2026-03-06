@@ -11,17 +11,18 @@
                <strong>核心亮点：</strong><br>
                • 设计“灵感 -> 小说 -> 脚本 -> 分镜”的生成闭环，自动提取场景、动作与对白。<br>
                • 自研 8 维度结构化提示词引擎，支持专业景别、镜头运用等指令输出。<br>
-               • 锁定角色一致性特征，输出不同艺术风格（电影感、水墨等）的视觉指令。`},kkb:{title:"客客帮 —— 话费权益订单全链路风控系统",tech:"Java 17 / Spring Cloud / Redis / RocketMQ / MySQL",desc:`支撑千万级话费/权益卡代充业务的全链路风控，保障平台交易安全。<br><br>
+               • 锁定角色一致性特征，输出不同艺术风格（电影感、水墨等）的视觉指令。`},kkb:{title:"客客帮 —— 话费权益订单全链路风控系统",tech:"Java 17 / Spring Cloud / Redis / RocketMQ / Dynamic Datasource",desc:`支撑千万级话费/权益卡代充业务的全链路风控，保障平台交易安全。<br><br>
                <strong>核心亮点：</strong><br>
-               • 主导动态风控策略引擎，实现根据交易频率等指标的阶梯式额度管控。<br>
-               • 实现自动化处罚中心，对高风险账号进行实时权限剥夺，准确率达 99.9%。<br>
-               • 针对风控指标大表统计，设计多级缓存与 SQL 调优，提升校验性能 60%。`},zhongtai:{title:"深能环保数智中台 (数智中心)",tech:"Flink / MySQL 调优 / DataWorks / SQL 物理优化",desc:`WIS 交易/分析数据分离及全量流批一体计算底座建设，聚焦指标定义与实时计算。<br><br>
+               • **MQ 消费者自动创建**：实现 Consumer 实例动态订阅与自动接入，支撑业务接入零人工预配置。<br>
+               • **多数据源动态路由**：基于权重实现核心库与准实时库动态分配，提升高频读写场景下的 QPS。<br>
+               • **动态风控引擎**：基于交易频率等指标实现阶梯式额度管控，处罚准确率 99.9%。<br>
+               • **性能优化**：针对风控指标大表统计，设计多级缓存与 SQL 调优，提升校验性能 60%。`},zhongtai:{title:"深能环保数智中台 (数智中心)",tech:"Flink / MySQL 调优 / DataWorks / SQL 物理优化",desc:`WIS 交易/分析数据分离及全量流批一体计算底座建设，聚焦指标定义与实时计算。<br><br>
                <strong>核心亮点：</strong><br>
                • 主导设计动态多指标计算合并算法，实现拖拽式自动转换 Flink 任务。<br>
                • 解决 Flink 数据漂移难题，优化作业 CU 调度逻辑保障数据一致性。<br>
-               • 针对 MySQL 视图索引下推失效，深度优化 SQL 物理计划，由 300s 降至 1s。`},wuwei:{title:"无为教育 —— 金融教育信息化系统",tech:"RocketMQ 源码 / 时间轮 / 微服务治理 / 直播架构",desc:`支撑 10w+ 在线直播的高并发教育平台，保障 1 亿级营收业务稳定性。<br><br>
+               • 针对 MySQL 视图索引下推失效，深度优化 SQL 物理计划，由 300s 降至 1s。`},wuwei:{title:"无为教育 —— 金融教育信息化系统",tech:"RocketMQ 源码 / 时间轮 / 微服务治理 / 直播架构",desc:`支撑 10w+ 在线直播的高并发教育平台，保障 10 亿级营收业务稳定性。<br><br>
                <strong>核心亮点：</strong><br>
-               • 主导 10w+ 级直播聊天室架构，支持 10w 同时在线观看、100w 订单转化预测。<br>
+               • 主导高并发直播系统建设，支持 10w 同时在线观看、100w 订单转化预测。<br>
                • 基于时间轮算法对 RocketMQ 进行源码级二次开发，实现私有化自定义延迟队列。<br>
                • 主导单体向微服务剥离，实现小程序到支付的自动化平滑切换，提升流水化部署效率。`},xiudian:{title:"咻电员工管理 & 商城 SaaS 系统",tech:"Netty / Protobuf / 纠偏算法 / IoT 轨迹处理",desc:`主导千万级 MQ 轨迹积压治理与高并发 IoT 位置服务架构。<br><br>
                <strong>核心亮点：</strong><br>
@@ -35,4 +36,4 @@
                     <div class="modal-description">
                         ${r.desc}
                     </div>
-                `,s.style.display="block",document.body.style.overflow="hidden")})});const c=()=>{s.style.display="none",document.body.style.overflow="auto"};t.addEventListener("click",c),window.addEventListener("click",o=>{o.target===s&&c()}),document.querySelectorAll(".ripple").forEach(o=>{o.addEventListener("click",function(n){let r=n.target.getBoundingClientRect(),a=n.clientX-r.left,p=n.clientY-r.top,l=document.createElement("span");l.style.left=a+"px",l.style.top=p+"px",l.classList.add("ripple-effect"),this.appendChild(l),setTimeout(()=>{l.remove()},600)})})});
+                `,s.style.display="block",document.body.style.overflow="hidden")})});const c=()=>{s.style.display="none",document.body.style.overflow="auto"};t.addEventListener("click",c),window.addEventListener("click",o=>{o.target===s&&c()}),document.querySelectorAll(".ripple").forEach(o=>{o.addEventListener("click",function(n){let r=n.target.getBoundingClientRect(),a=n.clientX-r.left,p=n.clientY-r.top,l=document.createElement("span");l.style.left=a+"px",l.style.top=p+"px",l.classList.add("ripple-effect"),this.appendChild(l),setTimeout(()=>l.remove(),600)})})});

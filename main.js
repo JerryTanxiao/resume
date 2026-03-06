@@ -29,12 +29,13 @@ const projectData = {
     },
     'kkb': {
         title: '客客帮 —— 话费权益订单全链路风控系统',
-        tech: 'Java 17 / Spring Cloud / Redis / RocketMQ / MySQL',
+        tech: 'Java 17 / Spring Cloud / Redis / RocketMQ / Dynamic Datasource',
         desc: `支撑千万级话费/权益卡代充业务的全链路风控，保障平台交易安全。<br><br>
                <strong>核心亮点：</strong><br>
-               • 主导动态风控策略引擎，实现根据交易频率等指标的阶梯式额度管控。<br>
-               • 实现自动化处罚中心，对高风险账号进行实时权限剥夺，准确率达 99.9%。<br>
-               • 针对风控指标大表统计，设计多级缓存与 SQL 调优，提升校验性能 60%。`
+               • **MQ 消费者自动创建**：实现 Consumer 实例动态订阅与自动接入，支撑业务接入零人工预配置。<br>
+               • **多数据源动态路由**：基于权重实现核心库与准实时库动态分配，提升高频读写场景下的 QPS。<br>
+               • **动态风控引擎**：基于交易频率等指标实现阶梯式额度管控，处罚准确率 99.9%。<br>
+               • **性能优化**：针对风控指标大表统计，设计多级缓存与 SQL 调优，提升校验性能 60%。`
     },
     'zhongtai': {
         title: '深能环保数智中台 (数智中心)',
@@ -48,9 +49,9 @@ const projectData = {
     'wuwei': {
         title: '无为教育 —— 金融教育信息化系统',
         tech: 'RocketMQ 源码 / 时间轮 / 微服务治理 / 直播架构',
-        desc: `支撑 10w+ 在线直播的高并发教育平台，保障 1 亿级营收业务稳定性。<br><br>
+        desc: `支撑 10w+ 在线直播的高并发教育平台，保障 10 亿级营收业务稳定性。<br><br>
                <strong>核心亮点：</strong><br>
-               • 主导 10w+ 级直播聊天室架构，支持 10w 同时在线观看、100w 订单转化预测。<br>
+               • 主导高并发直播系统建设，支持 10w 同时在线观看、100w 订单转化预测。<br>
                • 基于时间轮算法对 RocketMQ 进行源码级二次开发，实现私有化自定义延迟队列。<br>
                • 主导单体向微服务剥离，实现小程序到支付的自动化平滑切换，提升流水化部署效率。`
     },
@@ -66,7 +67,6 @@ const projectData = {
 };
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Reveal animation
     const reveals = document.querySelectorAll('.fade-in');
     
     const reveal = () => {
@@ -74,7 +74,6 @@ document.addEventListener('DOMContentLoaded', () => {
             const windowHeight = window.innerHeight;
             const elementTop = element.getBoundingClientRect().top;
             const elementVisible = 150;
-            
             if (elementTop < windowHeight - elementVisible) {
                 element.classList.add('active');
             }
@@ -84,7 +83,6 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', reveal);
     reveal();
 
-    // Project Modal Logic
     const modal = document.getElementById('project-modal');
     const modalBody = document.getElementById('modal-body');
     const cards = document.querySelectorAll('.project-card');
@@ -94,7 +92,6 @@ document.addEventListener('DOMContentLoaded', () => {
         card.addEventListener('click', () => {
             const projectId = card.getAttribute('data-project');
             const data = projectData[projectId];
-            
             if (data) {
                 modalBody.innerHTML = `
                     <div class="modal-header">
@@ -121,23 +118,18 @@ document.addEventListener('DOMContentLoaded', () => {
         if (e.target === modal) closeModal();
     });
 
-    // Ripple Effect
     const ripples = document.querySelectorAll('.ripple');
     ripples.forEach(button => {
         button.addEventListener('click', function(e) {
             let rect = e.target.getBoundingClientRect();
             let x = e.clientX - rect.left;
             let y = e.clientY - rect.top;
-            
             let ripple = document.createElement('span');
             ripple.style.left = x + 'px';
             ripple.style.top = y + 'px';
             ripple.classList.add('ripple-effect');
             this.appendChild(ripple);
-            
-            setTimeout(() => {
-                ripple.remove();
-            }, 600);
+            setTimeout(() => ripple.remove(), 600);
         });
     });
 });
