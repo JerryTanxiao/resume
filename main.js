@@ -19,7 +19,7 @@ const projectData = {
                • 插件化管理系统，支持插件热重载与自动化朋友圈/任务处理。`
     },
     'mangaflow': {
-        title: 'MangaFlow AI — 小说分镜全流程助手',
+        title: '小说/动漫分镜全流程助手',
         tech: 'React 19 / TypeScript / Google Gemini SDK / AIGC / Tailwind CSS',
         desc: `针对漫剧生产设计的全链路 AIGC 工业化助手，实现从文学文本向制作级视觉描述全自动流转。<br><br>
                <strong>核心亮点：</strong><br>

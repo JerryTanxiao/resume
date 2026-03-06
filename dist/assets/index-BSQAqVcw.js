@@ -7,7 +7,7 @@
                • 自研 HTTP POST 回调机制替代传统轮询，降低 60% 服务器负载，实现消息毫秒级响应。<br>
                • 深度集成 Dify API，支持 GPT/Claude 动态切换，落地 RAG 知识库辅助业务答疑。<br>
                • 基于 FFmpeg 实现语音消息自动识别与 TTS 情感化答复，能效提升 30%。<br>
-               • 插件化管理系统，支持插件热重载与自动化朋友圈/任务处理。`},mangaflow:{title:"MangaFlow AI — 小说分镜全流程助手",tech:"React 19 / TypeScript / Google Gemini SDK / AIGC / Tailwind CSS",desc:`针对漫剧生产设计的全链路 AIGC 工业化助手，实现从文学文本向制作级视觉描述全自动流转。<br><br>
+               • 插件化管理系统，支持插件热重载与自动化朋友圈/任务处理。`},mangaflow:{title:"小说/动漫分镜全流程助手",tech:"React 19 / TypeScript / Google Gemini SDK / AIGC / Tailwind CSS",desc:`针对漫剧生产设计的全链路 AIGC 工业化助手，实现从文学文本向制作级视觉描述全自动流转。<br><br>
                <strong>核心亮点：</strong><br>
                • 设计“灵感 -> 小说 -> 脚本 -> 分镜”的生成闭环，自动提取场景、动作与对白。<br>
                • 自研 8 维度结构化提示词引擎，支持专业景别、镜头运用等指令输出。<br>
