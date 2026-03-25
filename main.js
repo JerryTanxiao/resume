@@ -39,7 +39,7 @@ const projectData = {
                • **多数据源路由**：基于 MyBatis-Plus + Dynamic-Datasource 实现核心库与分治库的动态权重分配与读写分离。`
     },
     'zhongtai': {
-        title: '深能环保数智中台 (数智中心)',
+        title: '道衍运算 —— 深能环保数智中台 (数智中心)',
         tech: 'Flink / MySQL 物理优化 / DataWorks / 实时计算 / DataX / DolphinScheduler',
         desc: `WIS 交易/分析数据分离及全量流批一体计算底座建设，聚焦指标定义与实时计算看板。<br><br>
                <strong>核心亮点：</strong><br>
@@ -48,7 +48,7 @@ const projectData = {
                • **MySQL 物理计划优化**：将 300s 慢查询降至 1s，优化 SQL 物理计划，解决 MySQL 8.0 视图索引下推失效问题。`
     },
     'wuwei': {
-        title: '无为教育 —— 金融教育信息化系统',
+        title: '金融教育信息化系统 (1亿级营收支撑)',
         tech: 'RocketMQ 源码 / 时间轮算法 / 微服务治理 / 10w+ 直播架构 / JProfiler',
         desc: `支撑 10w+ 在线直播的高并发教育平台，保障 1 亿级营收业务稳定性。<br><br>
                <strong>核心亮点：</strong><br>

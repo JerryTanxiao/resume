@@ -17,11 +17,11 @@
                <strong>核心亮点：</strong><br>
                • **动态风控引擎**：基于阶梯式额度管控，实现自动化处罚对高风险账号实时权限剥夺，准确率 99.9%。<br>
                • **MQ 消费者治理**：实现 Consumer 实例的自动创建与 Topic 动态绑定，支持业务流量平滑切流与零配置上线。<br>
-               • **多数据源路由**：基于 MyBatis-Plus + Dynamic-Datasource 实现核心库与分治库的动态权重分配与读写分离。`},zhongtai:{title:"深能环保数智中台 (数智中心)",tech:"Flink / MySQL 物理优化 / DataWorks / 实时计算 / DataX / DolphinScheduler",desc:`WIS 交易/分析数据分离及全量流批一体计算底座建设，聚焦指标定义与实时计算看板。<br><br>
+               • **多数据源路由**：基于 MyBatis-Plus + Dynamic-Datasource 实现核心库与分治库的动态权重分配与读写分离。`},zhongtai:{title:"道衍运算 —— 深能环保数智中台 (数智中心)",tech:"Flink / MySQL 物理优化 / DataWorks / 实时计算 / DataX / DolphinScheduler",desc:`WIS 交易/分析数据分离及全量流批一体计算底座建设，聚焦指标定义与实时计算看板。<br><br>
                <strong>核心亮点：</strong><br>
                • **指标中心算法设计**：主导设计动态多指标计算合并算法，实现拖拽式自动转换 SQL/Flink 任务。<br>
                • **Flink 数据漂移与负载优化**：针对 CU 过高导致的调度延迟，通过任务频率平滑处理与批处理优化，保障数据一致性。<br>
-               • **MySQL 物理计划优化**：将 300s 慢查询降至 1s，优化 SQL 物理计划，解决 MySQL 8.0 视图索引下推失效问题。`},wuwei:{title:"无为教育 —— 金融教育信息化系统",tech:"RocketMQ 源码 / 时间轮算法 / 微服务治理 / 10w+ 直播架构 / JProfiler",desc:`支撑 10w+ 在线直播的高并发教育平台，保障 1 亿级营收业务稳定性。<br><br>
+               • **MySQL 物理计划优化**：将 300s 慢查询降至 1s，优化 SQL 物理计划，解决 MySQL 8.0 视图索引下推失效问题。`},wuwei:{title:"金融教育信息化系统 (1亿级营收支撑)",tech:"RocketMQ 源码 / 时间轮算法 / 微服务治理 / 10w+ 直播架构 / JProfiler",desc:`支撑 10w+ 在线直播的高并发教育平台，保障 1 亿级营收业务稳定性。<br><br>
                <strong>核心亮点：</strong><br>
                • **10w+ 级直播架构**：支撑 10w+ 实时观看及 100w 订单转化预测，提升人效由 0.8 LRO 至 1.5 LRO。<br>
                • **RocketMQ 源码开发**：利用时间轮算法对开源版进行二次开发，实现自主可控的自定义延迟队列。<br>
