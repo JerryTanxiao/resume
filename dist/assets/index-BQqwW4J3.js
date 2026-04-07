@@ -13,7 +13,7 @@
                <strong>核心亮点：</strong><br>
                • **全链路 AIGC 工作流编排**：设计文学文本向视觉制作脚本的自动转化算法，「灵感 -> 小说 -> 脚本 -> 分镜」生成闭环。<br>
                • **工业化结构化 Prompt 设计**：自研 8 维度提示词生成引擎，支持 [景别] | [人物] | [镜头运用] | [视觉质感] 等专业指令。<br>
-               • **多模态一致性控制**：锁定角色外貌特征并输出不同艺术风格（电影感、水墨、霓虹等）的视觉指令. `},kkb:{title:"客客帮 —— 话费权益订单全链路风控系统",tech:"Java 17 / Spring Cloud / Redis / RocketMQ / MySQL / MyBatis-Plus / Dynamic-Datasource",desc:`支撑千万级话费/权益卡代充业务的全链路风控，保障平台交易安全。<br><br>
+               • **多模态一致性控制**：锁定角色外貌特征并输出不同艺术风格（电影感、水墨、霓虹等）的视觉指令. `},kkb:{title:"话费权益订单全链路风控系统",tech:"Java 17 / Spring Cloud / Redis / RocketMQ / MySQL / MyBatis-Plus / Dynamic-Datasource",desc:`支撑千万级话费/权益卡代充业务的全链路风控，保障平台交易安全。<br><br>
                <strong>核心亮点：</strong><br>
                • **动态风控引擎**：基于阶梯式额度管控，实现自动化处罚对高风险账号实时权限剥夺，准确率 99.9%。<br>
                • **MQ 消费者治理**：实现 Consumer 实例的自动创建与 Topic 动态绑定，支持业务流量平滑切流与零配置上线。<br>

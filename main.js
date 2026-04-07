@@ -30,7 +30,7 @@ const projectData = {
                • **多模态一致性控制**：锁定角色外貌特征并输出不同艺术风格（电影感、水墨、霓虹等）的视觉指令. `
     },
     'kkb': {
-        title: '客客帮 —— 话费权益订单全链路风控系统',
+        title: '话费权益订单全链路风控系统',
         tech: 'Java 17 / Spring Cloud / Redis / RocketMQ / MySQL / MyBatis-Plus / Dynamic-Datasource',
         desc: `支撑千万级话费/权益卡代充业务的全链路风控，保障平台交易安全。<br><br>
                <strong>核心亮点：</strong><br>
