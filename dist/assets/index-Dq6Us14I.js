@@ -17,7 +17,7 @@
                <strong>核心亮点：</strong><br>
                • **动态风控引擎**：基于阶梯式额度管控，实现自动化处罚对高风险账号实时权限剥夺，准确率 99.9%。<br>
                • **MQ 消费者治理**：实现 Consumer 实例的自动创建与 Topic 动态绑定，支持业务流量平滑切流与零配置上线。<br>
-               • **多数据源路由**：基于 MyBatis-Plus + Dynamic-Datasource 实现核心库与分治库的动态权重分配与读写分离。`},zhongtai:{title:"道衍运算 —— 深能环保数智中台 (数智中心)",tech:"Flink / MySQL 物理优化 / DataWorks / 实时计算 / DataX / DolphinScheduler",desc:`WIS 交易/分析数据分离及全量流批一体计算底座建设，聚焦指标定义与实时计算看板。<br><br>
+               • **多数据源路由**：基于 MyBatis-Plus + Dynamic-Datasource 实现核心库与分治库的动态权重分配与读写分离。`},zhongtai:{title:"深能环保数智中台 (数智中心)",tech:"Flink / MySQL 物理优化 / DataWorks / 实时计算 / DataX / DolphinScheduler",desc:`WIS 交易/分析数据分离及全量流批一体计算底座建设，聚焦指标定义与实时计算看板。<br><br>
                <strong>核心亮点：</strong><br>
                • **指标中心算法设计**：主导设计动态多指标计算合并算法，实现拖拽式自动转换 SQL/Flink 任务。<br>
                • **Flink 数据漂移与负载优化**：针对 CU 过高导致的调度延迟，通过任务频率平滑处理与批处理优化，保障数据一致性。<br>

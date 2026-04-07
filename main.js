@@ -39,7 +39,7 @@ const projectData = {
                • **多数据源路由**：基于 MyBatis-Plus + Dynamic-Datasource 实现核心库与分治库的动态权重分配与读写分离。`
     },
     'zhongtai': {
-        title: '道衍运算 —— 深能环保数智中台 (数智中心)',
+        title: '深能环保数智中台 (数智中心)',
         tech: 'Flink / MySQL 物理优化 / DataWorks / 实时计算 / DataX / DolphinScheduler',
         desc: `WIS 交易/分析数据分离及全量流批一体计算底座建设，聚焦指标定义与实时计算看板。<br><br>
                <strong>核心亮点：</strong><br>
