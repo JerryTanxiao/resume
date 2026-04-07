@@ -61,7 +61,7 @@ const projectData = {
         tech: 'Netty / Protobuf / 纠偏算法 / IoT 轨迹处理 / JVM 调优 / Kettle',
         desc: `主导千万级 MQ 轨迹积压治理与高并发 IoT 位置服务架构。<br><br>
                <strong>核心亮点：</strong><br>
-               • **千万级 MQ 积压治理**：通过建立隔离 Topic 与 16 路 Queue 线性分摊压力，彻底解决 10000w 轨迹洪水导致的 OOM。<br>
+               • **千万级 MQ 积压治理**：通过建立隔离 Topic 与 16 路 Queue 线性分摊压力，彻底解决 1000w 轨迹洪水导致的 OOM。<br>
                • **高频 IoT 纠偏优化**：基于 Netty+Protobuf 压缩 70% 带宽，引入经纬度平滑纠偏算法将轨迹误差控制在米级。<br>
                • **业务自动化**：独立实现每日 50w 级工单自动派发机制，减少 80% 人工干预. `
     }

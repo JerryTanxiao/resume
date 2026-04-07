@@ -27,7 +27,7 @@
                • **RocketMQ 源码开发**：利用时间轮算法对开源版进行二次开发，实现自主可控的自定义延迟队列。<br>
                • **架构治理**：主导从 CRM 到微服务架构的剥离，实现从单体到微服务的演进。`},xiudian:{title:"咻电员工管理 & 商城 SaaS 系统",tech:"Netty / Protobuf / 纠偏算法 / IoT 轨迹处理 / JVM 调优 / Kettle",desc:`主导千万级 MQ 轨迹积压治理与高并发 IoT 位置服务架构。<br><br>
                <strong>核心亮点：</strong><br>
-               • **千万级 MQ 积压治理**：通过建立隔离 Topic 与 16 路 Queue 线性分摊压力，彻底解决 10000w 轨迹洪水导致的 OOM。<br>
+               • **千万级 MQ 积压治理**：通过建立隔离 Topic 与 16 路 Queue 线性分摊压力，彻底解决 1000w 轨迹洪水导致的 OOM。<br>
                • **高频 IoT 纠偏优化**：基于 Netty+Protobuf 压缩 70% 带宽，引入经纬度平滑纠偏算法将轨迹误差控制在米级。<br>
                • **业务自动化**：独立实现每日 50w 级工单自动派发机制，减少 80% 人工干预. `}};document.addEventListener("DOMContentLoaded",()=>{const u=document.querySelectorAll(".fade-in"),i=()=>{u.forEach(o=>{const n=window.innerHeight;o.getBoundingClientRect().top<n-150&&o.classList.add("active")})};window.addEventListener("scroll",i),i();const c=document.getElementById("project-modal"),d=document.getElementById("modal-body"),e=document.querySelectorAll(".project-card"),t=document.querySelector(".close-modal");e.forEach(o=>{o.addEventListener("click",()=>{const n=o.getAttribute("data-project"),r=b[n];r&&(d.innerHTML=`
                     <div class="modal-header">
